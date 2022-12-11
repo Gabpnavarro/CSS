@@ -1,0 +1,146 @@
+TEXTOS
+
+text-transform
+
+É responsável por definir quais caracteres vão estar em 
+Maiúsculo, minúsculo, etc.
+
+text-transform: capitalaze
+
+Inicio das palavras com maiusculo
+
+text-transform: uppercase
+
+Tudo maiusculo
+
+Há uma propriedade para deixar tudo minusculo.
+
+-----------------------------------------------------
+
+text-align
+
+Alinha nosso texto no nosso elemento.
+
+.exemplo{
+width:370px;
+border: 1px solid black
+}
+
+p {
+	padding: 10px;
+	text-align: justify;
+}
+
+-------------------------------------------------
+
+text-decoration
+
+Adiciona ou remove linhas no nosso texto: sejam linhas em cima, no 
+meio, ou embaixo.
+
+É uma propriedade abreviada de:
+
+	text-decoration-line
+	text-decoration-style
+	text-decoration-color
+	text-decoration-thickness
+
+	text-decoration-line: overline
+	text-decoration-line: underline
+	text-decoration-line: line-thro
+	text-decoration-style: wavy
+	text-decoration-color: red
+	text-decoration-thickness: 5px
+
+	text-decoration: underline wavy red 2px;
+
+---------------------------------------------
+
+text-ident
+
+Recuo do texto
+
+	text-ident: -5px;
+	text-ident: 5px;
+
+---------------------------------
+letter-spacing
+
+Espaçamento entre letras
+
+
+	letter-spacing:normal /tamanho padrão
+	letter-spacing: 2px / aumente espaço entre caracteres
+	letter-spacing: -2px / diminui espaço entre caracteres
+	word-spacing: 5 px /espaçamento entre as palavras
+
+
+--------------------------------
+
+
+white-space
+
+white-space: normal /Remove o espaço em branco extra.
+white-space: nowrap /Ignora espaço em branco e o texto
+white-space: pre /Espaço em branco é preservado do jeito que é
+white-space: pre-line
+white-space: pre-wrap
+white-space: break-spaces 
+
+
+-------------------------------
+
+word-wrap
+
+Se todas as palavras devem manter em uma linha ou quebra de linha.
+
+wordwap: normal
+wordwap: break-word
+
+Quebre a palavra no limite do conteiner.
+
+
+-----------------------------
+
+word-break: break-all
+
+Quebre a palavra em qualquer parte do caractere.
+
+word-break: keep-all
+
+O texto não pode quebrar linha.
+
+-------------------------------
+
+
+writing-mode: horizontal-tb; /padrão
+
+Texto feito da direita para a esquerda.
+
+writing-mode: vertical-rl; 
+
+Texto no sentido vertical da direita para a esquerda.
+
+writing-mode: vertical-lr; 
+
+Texto no sentido vertical da esquerda para a direita.
+
+
+--------------------------------
+
+text-overflow
+
+text-overflow: clip;
+
+Q
+
+text-overflow: ellipsis;
+
+Adiciona ... para mostrar ao usuario que tem continuação no texto,
+o texto esta cortado devido o conteiner.
+
+text-overflow: string;
+
+Adiciona ('voce pode adicionar um simbolo aqui da forma que quiser
+') para mostrar ao usuario que tem continuação no texto,
+o texto esta cortado devido o conteiner.

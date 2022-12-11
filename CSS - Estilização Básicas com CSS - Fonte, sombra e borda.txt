@@ -1,0 +1,235 @@
+Bordas
+
+Redefinição dos padrões
+
+*{
+padding: 0;
+margin: 0;
+vertical-align: baseline;
+list-style: none;
+border: 0;
+}
+
+-----------------------------------
+
+Estilo da Borda
+
+border-width
+Largura da borda
+
+border-style
+Cria estilos diferentes para a borda
+
+border-color 
+Cor da borda
+
+.exemplo {
+background-color: red;
+width:200px;
+height: 200px;
+border-width: 10px;
+border-style: solid;
+color: purple;
+}
+
+
+-------------------------
+
+border: 10px solid rgb( 83, 8, 84);
+
+
+Apenas com isso posso definir largura, estilo e cor(respectivamente).
+
+
+------------------------
+
+border-radius
+
+Deixa a borda arredondada, quanto menor o numero mais arredondado.
+
+border-radius:
+
+Se usar % fica em formato circular(dependendo do valor) e para 
+formatos geometricos diferentes pesquisar.
+
+------------------------------
+
+border-image-source
+Imagem nas vertices das bordas,preciso usar o código da borda
+obrigatoriamente para conseguir usa-la.
+
+border-image-width: 10px 20px 30px 40px
+Tamanho modificado do respectivamente do topo, direira, 
+baixo e esquerda.
+
+border-image-repeat:repeat;
+                    stretch;
+
+
+repeat
+Divide a imagem para caber na borda
+stretch
+Estica a imagem para caber na borda.
+
+
+border-image-slice:120
+Divide para a imagem em regiões para trabalhar a borda.
+
+
+--------------------------------------------------
+
+border-image-outset: 20px
+
+
+Definir qual a distancia da borda até o elemento.
+
+
+------------------------------------------------
+
+
+border-image: *source* / *slice* / *width* / *outset*/
+
+
+------------------------------------------------
+
+FONTES
+
+Grupos de fontes e tipos genericos
+
+Baixar fontes fonts.google.com
+
+copia e cola a parte do style.
+---------------------------------------------------
+
+font-family: ;
+
+Pode ver pelo proprio VS Code.
+
+----------------------------------------------------
+
+@font-face{
+	font-family: Roboto;
+	src: url(),url();
+	font-wight: bold; /*negrito/
+	font-wight: lighter; /*fino/
+	font-wight: normal; /*normal/
+
+}
+
+Vai pesquisar em outro local se tem a fonte desejada no source.
+
+------------------------------------------------------------
+@import url('')
+
+Importa o arquivo da fonte de um site.
+
+-----------------------------------------------------------
+
+font-size: 20px;
+font-size: xx-small;
+font-size: small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+
+div p {
+	font-size: smaller;
+}
+
+
+---------------------------------------------------------
+
+Font-Style: normal
+Font-Style: italic
+Font-Style: oblíque
+
+------------------------------------------------------------
+
+font-wight: 100
+font-wight: normal
+font-wight: bold /*negrito*/
+font-wight: lighter /*fino*/
+
+Aceita de 100 a 900, quanto menor mais fino e maior mais grosso.
+
+--------------------------------------------------------------
+
+font-variant:small-caps;
+
+Deixar todos os textos em maiusculo
+
+
+-------------------------------------------------------------
+
+font-stretch: normal
+font-stretch: semi-expanded
+font-stretch: expanded
+font-stretch: extra-expanded
+font-stretch: ultra-expanded
+
+Alargar o texto.
+
+-------------------------------------------------------------
+
+Espaçamento entre as linhas.
+
+line-height: 2;
+line-height: 100%;
+line-height: 200%;
+
+A porcentagem é em realação ao padrão da fonte. Não é recomendado 
+usar um espaçamento pequeno.
+
+-------------------------------------------------------------
+
+Em uma linha de código podemos usar um código para tudo.
+
+font: italic small-caps bold 24px/2 Georgia, serif;
+
+font-style/font-variant/font-wight/font-size/line-height/font-family
+
+ 
+-------------------------------------------------------------
+
+SOMBRA
+
+box-shadow
+
+div{
+	width: 200px;
+	height: 200px;
+	border: 10px solid #8f382e;
+	background: #fa8072;
+	margin: 20px auto;
+	box-shadow: inset 10px 10px 10px red, 20px 20px 20px black;
+}
+
+inset - dentro do elemento
+a , define uma segunda sombra e px o tamanho da sombra, pode ser
+negativo.
+O 3° 10px significa o desfoque.
+
+div{
+	width: 200px;
+	height: 200px;
+	border: 10px solid #8f382e;
+	background: #fa8072;
+	margin: 20px auto;
+	filter: drop-shadow(10px 10px 5px gray) /filtro de sombra/
+}
+
+---------------------------------------------------
+
+Efeito de Sombra nos Textos
+
+h2{
+	color: deeppink;
+	font-size: 40px;
+	text-align: center;
+	text-shadow: -10px 10px 10px purple /sombra no texto/
+	filter: drop-shadow(10px 10px 5px gray) /filtro de sombra/
+}
+
+---------------------------------------------------
+

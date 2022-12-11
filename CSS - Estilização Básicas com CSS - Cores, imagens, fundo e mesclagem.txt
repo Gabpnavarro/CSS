@@ -1,0 +1,382 @@
+Notas sobre cores CSS - AULA 10
+
+
+CORES 
+
+
+COR TRANSPARENT - Transparent
+
+Código: current-color
+
+current-color{
+color: orange
+border: 2 px solid
+borda de cor vermelha 
+}
+
+current-color{
+color: orange
+border: 2 px current-color
+}
+
+Altera a cor da letra com o current color pegando o nome dito
+no color.
+
+--------------------------------------------------------
+
+
+#RGB (0,0,0){
+color: rgb(256,0,0)
+}
+
+Resultado dessa cor é vermelha.
+
+
+(RED,GREEN,BLUE)
+
+Cada parte do parenteses irá definir a cor e tonalidade.
+
+- Para definir o nivel de transparencia é usado RGBA
+
+#rgba {
+color: rgba(255,0,0,0.2)
+}
+
+O numéro (x,x,x,0.2) defini o valor de opacidade 
+(20% de transparência).
+
+-----------------------------------------------------
+
+Hexadecimal
+
+#hex {
+color:#FFFFFF
+}
+
+São usado 6 digitos separados entre F o máximo da tonalidade 
+e 0 o mínimo da tonalidade.
+
+Exemplo : 
+#hex {
+color:#FF0000
+}
+
+Essa é a cor vermelha.
+
+
+---------------------------------------------------
+
+HSL 
+
+- Matriz (Hue)
+
+360° reprenta as cores (definida por graus "°")
+
+0 ou 360 - Vermelho
+
+120 - Verde 
+
+240 - Azul
+
+- Saturação (Saturation)
+
+Representado em % de 0 com um tom cinza a 100% com a cor total.
+
+- Luminosidade (Lightness)
+
+Representado de 0% que é preto a 100% que é branco.
+Em 50% é sua intensidade normal.
+
+#hsl{
+
+background: hsl(0,100%,30%)
+
+}
+
+Cor vermelha 
+
+#hsla{
+
+background: hsla(0,100%,30%,.2)
+
+}
+
+Cor vermelha com transparência
+
+
+-----------------------------------------------
+
+IMAGEM
+
+
+Propriedade object-fit
+
+Como o video será reajustado dentro de um elemento HTML, 
+vai definir se é necessário reajustar o tamanho do vídeo/imagem.
+
+<body>
+
+<code>object-fit:fill;</code> (padrão)
+<div>
+img src="link da imagem"
+</div>
+
+</body>
+
+-fill- é o que define tamanho padrão
+
+Exemplo com imagem distorcida, pois a original tem o padrão
+diferente
+
+img {
+width: 200px;
+height: 300px;
+border: 5px solid blue;
+}
+
+contain {
+object-fit:contain;
+}
+
+Coloca a imagem dentro do conteiner e mantém suas dimensões bases
+sem precisar distorcer.
+
+cover{
+object-fit:cover;
+}
+
+Corta a imagem para caber dentro do conteiner podendo perder 
+parte do conteúdo.
+
+none{
+object-fit:none;
+}
+
+Ignora o tamanho predefinido e mantém o tamanho de origem.
+
+none{
+object-fit: scala-down;
+}
+
+Ele opta pela imagem com o menor tamanho sem distorção, menor
+proporção.
+
+
+------------------------------------
+
+Usado em conjunto com object-fit
+
+-Object-position:
+Especifica qual centralização da imagem na horizontal e vertical.
+
+Exemplo de como pode ser usado:
+
+object-position: 30px 40px
+
+object-position: right top
+
+object-position: left botton
+
+Obs:
+30 px (horizontal) 
+40 px (vertical)
+
+--------------------------------
+FUNDO DOS ELEMENTOS
+
+Cor de fundo :
+
+background-image: url('Local da imagem no PC')
+
+Efeito degrade: Começa com uma cor e passa para a outra.
+
+background-image: linear-gradient(cor,cor)
+
+Degrade partindo do meio da imagem.
+radial-gradient
+
+Efeito de listras
+repeating-linear-gradient(to top,palevioletred 0 20px, 
+lightpink 20px 40px)
+
+Pode sobrepor uma imagem em cima da outra
+
+background-image: url(),url()
+
+
+Link para ver formas de imagens :
+https://projects.verou.me/css3patterns/
+
+
+-------------------------------------------
+
+
+Redimencionar o tamanho das imagens
+
+backgound-size: auto;
+
+backgound-size: cover;
+cobrir, ocupa todo espaço de fundo do elemento, corta um pedaço.
+
+backgound-size: contain;
+Redimenciona o tamanho para cobrir todo o conteudo da imagem.
+
+backgound-size: valor;
+
+Definir o tamanho de medida
+
+background size: 300px;  
+background size: 100%;  
+background size: 300px 200px;
+background size: 200px 100%;  
+
+
+#exemplo-camada {
+background-size: 200px 100%, cover;
+}
+
+Nesse exemplo é colocado duas imagens uma delas está com seu
+tamanho em 200 px 100% e a outra definição é que ela ocupa
+todo espaço.
+
+------------------------------------
+
+background-repeat: repeat;
+Repete a imagem
+
+background-repeat: repeat-x;
+Repete a imagem no eixo horizonta.
+
+background-repeat: repeat-y;
+Repete a imagem no eixo vertical.
+
+background-repeat: space;
+Repete nas duas direções sem ser cortado e adiciona um espaço
+em branco para não cortalas.
+
+background-repeat: round;
+Repete nas duas direções sem ser cortado porém suas bordas se 
+tocam com suas repetições, diferente do space.
+
+background-repeat: no-repeat;
+Não se repete.
+
+Exemplo
+
+background-repeat: no-repeat round
+A imagem não se repete na horizontal e se repete na direção 
+vertical e se tocam as imagens.
+
+--------------------------------------------------
+Posicionamento das Imagens de Fundo
+background-position
+
+background-position: 30px;
+background-position: 5%;
+background-position: horizontal vertical;
+background-position: center 80%;
+background-position: center left ;
+
+A porcentagem na horizontal começa da esquerda para 
+direita (0 a 100%).
+A porcentagem na vertical começa da cima para 
+baixo (0 a 100%).
+
+background-position: bottom 10px right 20px;
+Esse 10px é a distância do limite baixo com a imagem.
+Esse 20px é a distância do limite direta com a imagem.
+
+
+--------------------------------------------------
+background-attachment
+
+Define como o fundo do elemento vai se movimentar de acordo com
+a janela do navegador
+
+
+.exemplo {
+width: 300px;
+heitght: 300px;
+background-image: url();
+background-size: cover;
+border: 1px solid red;
+overflow: auto; 
+}
+
+
+background-attachment: fixed;
+Imagem fica fixa.
+
+background-attachment: scroll;
+A imagem rola junto com a página.
+
+background-attachment: local;
+A imagem vai rola junto com o conteudo.
+
+
+-------------------------------------------------
+
+background-origin
+
+Definir o ponto de origem da imagem de fundo.
+
+.exemplo {
+width: 300px;
+heitght: 300px;
+background-image: url();
+background-size: 100% 100$;
+border: 15px dashed palegreen;
+padding: 30px; 
+}
+
+background-origin: padding-box;
+O valor padrão que a imagem de fundo do elemento 
+inicia do ponto superior esquerdo espaçamento interno (padding). 
+
+background-origin: border-box;
+Cobre a área que a borda se encontra e inicia na esquerda no
+ponto superior.
+
+background-origin: content-box;
+Preenche a área que contém o conteúdo do nosso elemento.
+
+-----------------------------------------------
+
+background-clip
+Define até que ponto a imagem ou cor de fundo deve se estender 
+dentro do elemento.
+
+background-clip: padding-box;
+A borda não é preenchida.
+
+background-clip: border-box;
+O plano de fundo é preenchido junto com a borda.
+
+background-clip: content-box;
+O plano de fundo não tem um espaçamento interno e nem a borda.
+
+background-clip: text;
+
+text{
+-webkit-background-clip: text;
+color: transparent;
+background-clip: text
+}
+
+Há um efeito no texto .
+
+-------------------------------------
+
+MESCLAGEM
+
+background-blend-mode: multiply;
+
+Define o modo de mesclagem de cada camada de fundo.
+
+--------------------------------------
+
+background:
+	url()/*background-image* / *position* / *size* / *no-repeat*/
+*attachment*/ *origin*/ *clip*/ *color*/
+
+Define em diferentes propriedades uma só declaração.

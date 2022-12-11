@@ -1,0 +1,33 @@
+opacity: 0.2 /20% de transparência
+
+De 0 a 1, define o nível de transparência.
+
+---------------------------
+
+overflow
+
+Quando o conteudo não cabe dentro do tamanho do conteiner, ele 
+defini o que deve acontecer com o conteúdo.
+
+overflow: visible;
+
+overflow: hideen;
+
+O que não couber no conteiner é cortado e fica transparente.
+
+overflow: scroll;
+
+Uma barra de scroll é criada no conteiner para poder ler todo
+conteudo.
+
+overflow: auto;
+
+O scroll só é adiciona se o conteudo dentro do conteiner for maior
+que o espaço delimitado, caso seja menor o conteudo o scroll não 
+é adicionado.
+
+overflow-y: ;
+overflow-x: ;
+
+---------------------------------------------------
+

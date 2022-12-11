@@ -1,0 +1,110 @@
+UNIDADE DE MEDIDA
+
+Unidade de Medidas no CSS
+
+Unidade de Medida Absoluta:
+
+
+O resultado será sempre o mesmo, não muda por inteferência por 
+outro elemento.
+
+<integer>
+
+Valores inteiros
+
+<number>
+
+Valores decimais
+
+<percentage>
+
+Valores em fração de algum valor (50%)
+
+<dimension>
+	<length> /Distancia (px,em,vw,in)
+	<angle> /Ângulo(deg,rad,grad,turn)
+	<time> /Tempo (s,ms)
+	<resolution> / ()
+
+Pixels no CSS
+
+É a unidade absoluta mais usada.
+
+---------------------
+
+Unidade de medida Relativa
+
+É usada atrevalado a outro valor, ele pode variar. A vantagem
+faz com que o resultado possa variar de acordo com o valor
+da propriedade do elemento no qual estamos nos baseando.
+
+%
+em
+rem
+vw
+vh
+...
+
+-Porcentagem
+
+Ela é uma unidade de medida que irá utilizar como referencia
+o elemento pai para se basear, podendo alterar os resultados de 
+acordo com o lugar em que está inserido.
+
+
+-Em
+
+Usada para definir o tamanho da fonte de um elemento, usa como 
+referencia o font-size do elemento pai no qual está inserido.
+
+Ele multiplica pelo valor definido para ele ou o padrão.
+
+
+-rem
+
+
+O rem (root em) tem u funcionamento semelhante à unidade de medida
+em, porém a diferença é que, enquanto o em utiliza o elemento
+pai como referência, o rem está relacionado ao tamanho da fonte
+do elemento raiz, chamado root, que no caso, é a tag html.
+
+-Diferença entre rem e em
+
+rem
+
+Tamanho consistente, sem herança
+Melhor experiência do usuário
+
+em
+
+Contexto dos elementos
+
+------------------------
+
+vw
+
+Viewport width
+
+Medida da largura. Varia de 0 a 100. Considera a tela total.
+
+vh 
+
+viewoirt height
+
+Medida da altura. Varia de 0 a 100. Considera a tela total.
+
+
+------------------------------------
+
+ex
+
+ch 
+
+
+------------------------
+
+calc()
+
+Pode fazer calculos básicos, como, soma, subtração e divisão.
+
+calc (30px + 2rem)
